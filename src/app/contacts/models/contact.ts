@@ -4,6 +4,7 @@ export interface Contact {
 	middleName: string;
 	organization: string;
 	department: string;
+	position: string;
 	email: string;
 	phone: string;
 }
