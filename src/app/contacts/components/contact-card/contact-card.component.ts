@@ -11,7 +11,7 @@ export class ContactCardComponent implements OnInit {
 	@Input() contact: Contact;
 	public profilePhotoUrl: string;
 	constructor() {
-		this.profilePhotoUrl = 'assets/photo.png';
+		this.profilePhotoUrl = 'assets/images/photo.png';
 	}
 
 	ngOnInit() {
