@@ -1,7 +1,7 @@
 <app-contacts-header></app-contacts-header>
-<div>
+<div class="contacts">
 	<app-contacts-filter></app-contacts-filter>
-	<div>
+	<div class="contacts-cards">
 		<app-contact-card *ngFor="let contact of contacts | async" [contact]="contact"></app-contact-card>
 	</div>
 	<div class="paginator-block">

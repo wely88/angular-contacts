@@ -1,12 +1,12 @@
-<div>
-	<form formGroup="fg">
-		<div>
-			<select formControlName="select">
+<div class="contacts-filter">
+	<form formGroup="fg" class="filter-form">
+		<div class="filter-form__container">
+			<select class="filter-form__select" formControlName="select">
 				<option value="option{{i}}" *ngFor="let option of selectOptions; let i = index">Option {{i}}</option>
 			</select>
 		</div>
-		<div>
-			<input type="text" placeholder="Введите ФИО, должность или номер телефона" formControlName="input">
+		<div class="filter-form__container">
+			<input class="filter-form__input" type="text" placeholder="Введите ФИО, должность или номер телефона" formControlName="input">
 		</div>
 	</form>
 </div>
