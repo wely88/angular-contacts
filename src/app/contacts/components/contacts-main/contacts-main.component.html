@@ -5,7 +5,17 @@
 		<app-contact-card *ngFor="let contact of contacts | async" [contact]="contact"></app-contact-card>
 	</div>
 	<div class="paginator-block">
-		pagination
-		<!-- put your code here -->
+		<ul class="paginator-block-list">
+			<li class="paginator-block-list__item paginator-block-list__item_active">1</li>
+			<li class="paginator-block-list__item">2</li>
+			<li class="paginator-block-list__item">3</li>
+			<li class="paginator-block-list__item">4</li>
+			<li class="paginator-block-list__item">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M10.217 13.2855L13.9586 9.57098L10.217 5.80242" stroke="currentColor" stroke-width="1.28"/>
+					<path d="M5.54008 9.54394H13.0232" stroke="currentColor" stroke-width="1.28"/>
+				</svg>
+			</li>
+		</ul>	
 	</div>
 </div>

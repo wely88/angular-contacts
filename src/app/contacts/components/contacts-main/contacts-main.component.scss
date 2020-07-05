@@ -1,6 +1,6 @@
 //import global project variables
 @import "../../../../variables.scss";
-
+@import "../../../../mixins.scss";
 
 .contacts-container {
 	background-color: $colorWhite;
@@ -19,5 +19,38 @@
 
 .paginator-block {
   	display: inline-flex;
- 	background: $colorLightsalmon;
+  	justify-content: center;
+    width: 100%;
+    margin-bottom: 38px;
+}
+
+.paginator-block-list {
+  	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 1rem;
+}
+
+.paginator-block-list__item {
+	@extend %flex-c-c;
+	border: 1px solid $colorDarkGrey;
+	border-radius: 50%;
+	height: 24.5px;
+	width: 25.5px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+	color: $colorDarkGrey;
+	transition: .3s;
+
+	&:hover {
+		cursor: pointer;
+		border: 1.28px solid $colorPurple;
+		color: $colorPurple;
+	 }
+}
+
+.paginator-block-list__item_active {
+	border: 1.28px solid $colorPurple;
+	color: $colorPurple;
 }
