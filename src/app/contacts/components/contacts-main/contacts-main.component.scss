@@ -1,7 +1,23 @@
 //import global project variables
 @import "../../../../variables.scss";
 
+
+.contacts-container {
+	background-color: $colorWhite;
+	max-width: 1395px;
+	width: 100%;
+	padding: 0 24px;
+	margin: 0 auto 23px;
+}
+
+.contacts-cards {
+	padding: 0 93px 44px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2vw;
+}
+
 .paginator-block {
-  display: inline-flex;
-  background: $colorLightsalmon;
+  	display: inline-flex;
+ 	background: $colorLightsalmon;
 }

@@ -1,4 +1,10 @@
+//import global project variables
+@import "../../../../variables.scss";
+
 .contact-card {
+	display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 28px;
 }
 
 .contact-card__image {
@@ -8,4 +14,45 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
+}
+
+.contact-card__header {
+	margin-bottom: 10px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	letter-spacing: 0.15px;
+	color: $colorDarkText;
+}
+
+%contacts-font-grey {
+  	font-style: normal;
+	font-weight: normal;
+	font-size: 0.75rem;
+	line-height: 0.875rem;
+	color: $colorLightgreyText;
+}
+
+.contact-card__organization {
+ 	@extend %contacts-font-grey;
+	margin-bottom: 5px;	
+}
+
+.contact-card__department {
+	@extend %contacts-font-grey;
+	margin-bottom: 5px;	
+}
+
+.contact-card__position {
+ 	@extend %contacts-font-grey;
+	margin-bottom: 10px;	
+}
+
+.contact-card__phone, .contact-card__email {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 0.75rem;
+	line-height: 0.875rem;
+	color: $colorDark;
 }
