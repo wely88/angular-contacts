@@ -4,17 +4,17 @@
 
 
 .contacts-header {
- 	@extend %flex-c-c;
-	padding: 24px 0;
-    margin: 0 24px;
-    border-bottom: 3px solid $colorGrayBg;
-} 
+ 	@include flex-c-c;
+	padding: 1.5rem 0;
+    margin: 0 1.5rem;
+    border-bottom: 3px solid $colorGrey;
 
-.contacts-header__text {
-	font-style: normal;
-	font-weight: bold;
-	font-size: 1.375rem;
-	line-height: 1.625rem;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
+	&__text {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 1.375rem;
+		line-height: 1.625rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+}	

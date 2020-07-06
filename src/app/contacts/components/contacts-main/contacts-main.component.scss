@@ -3,54 +3,69 @@
 @import "../../../../mixins.scss";
 
 .contacts-container {
+	@include wrapper;
+	padding: 2.5rem 2.375rem 3.1875rem 5.8rem;
 	background-color: $colorWhite;
-	max-width: 1395px;
-	width: 100%;
-	padding: 0 24px;
-	margin: 0 auto 23px;
+
+	@include _1440 {
+		padding: 2.5rem 2.375rem 3.1875rem;
+  	}
+
+  	@include _1024 {
+		padding: 2.5rem 1rem 3.1875rem;
+	}
 }
 
 .contacts-cards {
-	padding: 0 93px 44px;
+	margin-top: 1.75rem;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 2vw;
+	grid-gap: 2rem;
+
+	@include _1024 {
+		grid-template-columns: repeat(2, 1fr);
+	}	
 }
 
 .paginator-block {
   	display: inline-flex;
   	justify-content: center;
     width: 100%;
-    margin-bottom: 38px;
+    margin-top: 2.75rem;
 }
 
 .paginator-block-list {
   	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-gap: 1rem;
-}
 
-.paginator-block-list__item {
-	@extend %flex-c-c;
-	border: 1px solid $colorDarkGrey;
-	border-radius: 50%;
-	height: 24.5px;
-	width: 25.5px;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 14px;
-	line-height: 16px;
-	color: $colorDarkGrey;
-	transition: .3s;
+	&__item {
+		width: 24.61px;
+		height: 25.45px;
+	}
 
-	&:hover {
-		cursor: pointer;
+	&__button {
+		@include flex-c-c;
+		border: 1px solid $colorDarkGrey;
+		border-radius: 50%;
+		height: 1.5rem;
+		width: 1.5rem;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 0.875rem;
+		line-height: 1rem;
+		color: $colorDarkGrey;
+		transition: $transition;
+
+		&:hover {
+			cursor: pointer;
+			border: 1.28px solid $colorPurple;
+			color: $colorPurple;
+		 }
+	}
+
+	&__button_active {
 		border: 1.28px solid $colorPurple;
 		color: $colorPurple;
-	 }
-}
-
-.paginator-block-list__item_active {
-	border: 1.28px solid $colorPurple;
-	color: $colorPurple;
-}
+	}
+}	

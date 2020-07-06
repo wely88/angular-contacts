@@ -37,6 +37,11 @@ body {
   line-height: 1.5;
 }
 
+/* all divs are relative by default*/
+div {
+  position: relative;
+}
+
 /* Remove list styles on ul, ol elements with a class attribute */
 ul[class],
 ol[class] {
@@ -64,5 +69,12 @@ input,
 button,
 textarea,
 select {
+  padding: 0;
   font: inherit;
+  border: none;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
 }

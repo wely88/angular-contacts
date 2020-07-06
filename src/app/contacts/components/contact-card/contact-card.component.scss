@@ -1,58 +1,56 @@
 //import global project variables
 @import "../../../../variables.scss";
+@import "../../../../mixins.scss";
+
+%contacts-font-grey {
+  	font-style: normal;
+	@include font-small;
+	color: $colorLightgrey;
+}
 
 .contact-card {
 	display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-gap: 28px;
-}
+    grid-gap: 1.75rem;
 
-.contact-card__image {
-	height: 67px;
-	width: 67px;
-	border-radius: 50%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
-.contact-card__header {
-	margin-bottom: 10px;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 1rem;
-	line-height: 1.5rem;
-	letter-spacing: 0.15px;
-	color: $colorDarkText;
-}
+	&__image {
+		height: 4.1875rem;
+		width: 4.1875rem;
+		border-radius: 50%;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
 
-%contacts-font-grey {
-  	font-style: normal;
-	font-weight: normal;
-	font-size: 0.75rem;
-	line-height: 0.875rem;
-	color: $colorLightgreyText;
-}
+	&__header {
+		margin-bottom: 0.625rem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1rem;
+		line-height: 1.5rem;
+		letter-spacing: 0.15px;
+		color: $colorBlackCard;
+	}
 
-.contact-card__organization {
- 	@extend %contacts-font-grey;
-	margin-bottom: 5px;	
-}
+	&__organization {
+	 	@extend %contacts-font-grey;
+		margin-bottom: 0.3125rem;	
+	}
 
-.contact-card__department {
-	@extend %contacts-font-grey;
-	margin-bottom: 5px;	
-}
+	&__department {
+		@extend %contacts-font-grey;
+		margin-bottom: 0.3125rem;	
+	}
 
-.contact-card__position {
- 	@extend %contacts-font-grey;
-	margin-bottom: 10px;	
-}
+	&__position {
+	 	@extend %contacts-font-grey;
+		margin-bottom: 0.625rem;	
+	}
 
-.contact-card__phone, .contact-card__email {
-	font-style: normal;
-	font-weight: normal;
-	font-size: 0.75rem;
-	line-height: 0.875rem;
-	color: $colorDark;
+	&__phone, &__email {
+		@include font-small;
+		font-style: normal;
+		color: $colorDark;
+	}
 }

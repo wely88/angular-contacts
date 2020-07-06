@@ -1,7 +1,123 @@
 //import global project variables
 @import "../../../../variables.scss";
+@import "../../../../mixins.scss";
 
-.toggle-button {
-  display: inline-flex;
-  background: $colorLightseagreen;
+.contacts-filter {
+	
+}
+
+.contacts-filter-form {
+	overflow: auto;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	background: $colorWhite;
+	opacity: 0.9;
+	border: 0.7px solid #6E767D;
+	box-shadow: 0px 2.8px 15px rgba(0, 0, 0, 0.07);
+	border-radius: 72px;
+
+	&__container {
+		&:first-child {
+			border-right: 1px solid #7C8389;
+		}
+	}
+
+	&__select, &__input {
+		padding: 0.4rem 1rem;
+		border: none;
+		width: 100%;
+		font-style: italic;
+		@include font-small;
+		color: $colorBlackForm;
+		opacity: 0.8;
+	}	
+
+	&__select {
+		-webkit-appearance: none;
+	 	-moz-appearance: none;
+	 	appearance: none;
+	 	background-image: url("data:image/svg+xml,%0A%3Csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.58714 2.49946e-07L0.462402 1.13514L5.28272 6L10.103 1.13514L8.9783 1.89245e-06L5.28272 3.72973L1.58714 2.49946e-07Z' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
+	 	background-repeat: no-repeat;
+	    background-position: 98% center;
+	}
+
+	&__btn {
+		@include flex-c-c;
+		position: absolute;
+	    right: 1rem;
+	    top: 3px;
+	    border: none;
+	    background: transparent;
+	    color: $colorDarkGrey;
+
+	    &:hover {
+	    	cursor: pointer;
+	    	color: $colorDark;
+	    }
+	}
+}	
+
+.contacts-toggle {
+	margin-top: 0.875rem;
+	display: flex;
+}
+
+.contacts-toggle-container {
+	display: flex;
+	margin-right: 3.375rem;
+
+	&__button {
+	  border: none;
+	  background: transparent;
+	}
+
+	&__toggle {
+	   	&__toggle_control {
+			transition: $transition;
+			width: 2rem;
+	    	height: 0.8rem;
+			display: block;
+			border-radius: 1rem;
+			background-color: $colorLightgrey;
+			opacity: 0.4;
+			position: relative;
+			&:after {
+				transition: $transition;
+				cursor: pointer;
+				content: "";
+				width: 1.2rem;
+				height: 1.2rem;
+				display: block;
+				background-color: #fff;
+				border-radius: 50%;
+				box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 3px 7px rgba(0, 0, 0, 0.1);
+				position: absolute;
+				top: 50%;
+				left: 20%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%)
+			}
+	   	}
+	   
+		&__toggle_input { 
+			display: none;
+			&:checked + &__toggle_control {
+	 		 	background-color: $colorDark;
+				&:after { 
+					left: 80%;
+				}
+			}
+		}
+	}	
+
+	&__text {
+		margin-left: 0.5rem;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1rem;
+		line-height: 1.2rem;
+		letter-spacing: 0.15px;
+		color: #000000;
+		opacity: 0.3;
+	}
 }
