@@ -8,11 +8,11 @@
 	background-color: $colorWhite;
 
 	@include _1440 {
-		padding: 2.5rem 2.375rem 3.1875rem;
+		padding: 2.5rem 2.375rem;
   	}
 
-  	@include _1024 {
-		padding: 2.5rem 1rem 3.1875rem;
+  	@include _600 {
+		padding: 1.5rem 1rem;
 	}
 }
 
@@ -24,7 +24,13 @@
 
 	@include _1024 {
 		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 2.5rem 3rem
 	}	
+
+	@include _600 {
+		grid-template-columns: 1fr;
+		grid-gap: 1.5rem;
+	}
 }
 
 .paginator-block {

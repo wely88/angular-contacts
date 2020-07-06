@@ -13,6 +13,14 @@
     grid-template-columns: 1fr 4fr;
     grid-gap: 1.75rem;
 
+    @include _768 {
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+	}
+
+	@include _768 {
+		grid-template-columns: 1fr 3fr;
+	}
 
 	&__image {
 		height: 4.1875rem;

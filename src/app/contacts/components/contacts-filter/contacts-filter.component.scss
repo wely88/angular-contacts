@@ -16,6 +16,10 @@
 	box-shadow: 0px 2.8px 15px rgba(0, 0, 0, 0.07);
 	border-radius: 72px;
 
+	 @include _600 {
+	    grid-template-columns: 1fr 1fr;
+	}
+
 	&__container {
 		&:first-child {
 			border-right: 1px solid #7C8389;
@@ -39,6 +43,18 @@
 	 	background-image: url("data:image/svg+xml,%0A%3Csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.58714 2.49946e-07L0.462402 1.13514L5.28272 6L10.103 1.13514L8.9783 1.89245e-06L5.28272 3.72973L1.58714 2.49946e-07Z' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
 	 	background-repeat: no-repeat;
 	    background-position: 98% center;
+
+	    @include _1024 {
+	    	background-position: 95% center;
+		}
+	}
+
+	&__input {
+		@include _600 {
+	    	&::placeholder {
+			text-indent: -999px;
+			}
+		}
 	}
 
 	&__btn {
@@ -50,6 +66,10 @@
 	    background: transparent;
 	    color: $colorDarkGrey;
 
+	    @include _768 {
+	    	right: 0.5rem;
+		}
+
 	    &:hover {
 	    	cursor: pointer;
 	    	color: $colorDark;
@@ -60,17 +80,29 @@
 .contacts-toggle {
 	margin-top: 0.875rem;
 	display: flex;
+
+	@include _600 {
+		flex-direction: column;
+	}
 }
 
 .contacts-toggle-container {
 	display: flex;
 	margin-right: 5rem;
 
+	@include _768 {
+	    margin-right: 1.5rem;
+	}
+
+	@include _600 {
+		margin-bottom: 0.25rem;
+	}	
+		
+
 	&__button {
 	  border: none;
 	  background: transparent;
 	}
-
 
 	&__text {
 		margin-left: 0.5rem;
@@ -81,6 +113,10 @@
 		letter-spacing: 0.15px;
 		color: #000000;
 		opacity: 0.3;
+
+		@include _600 {
+			font-size: 0.875rem;
+		}	
 	}
 }
 
