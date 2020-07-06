@@ -16,15 +16,34 @@
 	box-shadow: 0px 2.8px 15px rgba(0, 0, 0, 0.07);
 	border-radius: 72px;
 
-	 @include _600 {
+	@include _600 {
 	    grid-template-columns: 1fr 1fr;
+	}
+
+	@include _375 {
+	    grid-template-columns: 1fr;
+		border: none;
+		border-radius: 0;
+		box-shadow: unset;
 	}
 
 	&__container {
 		&:first-child {
 			border-right: 1px solid #7C8389;
+
+			@include _375 {
+			    border-right: none;
+			}
 		}
-	}
+
+		&:last-child {
+
+			@include _375 {
+				margin-top: 0.5rem;
+			    border-bottom: 1px solid #7C8389;
+			}
+		}
+	}	
 
 	&__select, &__input {
 		padding: 0.4rem 1rem;
@@ -46,6 +65,12 @@
 
 	    @include _1024 {
 	    	background-position: 95% center;
+		}
+
+		@include _375 {
+		    border: 0.7px solid #6E767D;
+			box-shadow: 0px 2.8px 15px rgba(0, 0, 0, 0.07);
+			border-radius: 72px;
 		}
 	}
 

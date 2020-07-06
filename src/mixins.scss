@@ -22,8 +22,8 @@
     }
 }
 
-@mixin _480 {
-    @media (max-width: 480px) {
+@mixin _375 {
+    @media (max-width: 375px) {
         @content;
     }
 }
