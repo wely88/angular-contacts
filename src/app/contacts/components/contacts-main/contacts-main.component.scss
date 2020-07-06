@@ -46,16 +46,16 @@
 	grid-gap: 1rem;
 
 	&__item {
-		width: 24.61px;
-		height: 25.45px;
+		height: 1.5rem;
+		width: 1.5rem;
 	}
 
 	&__button {
 		@include flex-c-c;
 		border: 1px solid $colorDarkGrey;
 		border-radius: 50%;
-		height: 1.5rem;
-		width: 1.5rem;
+		height: 100%;
+		width: 100%;
 		font-style: normal;
 		font-weight: bold;
 		font-size: 0.875rem;
